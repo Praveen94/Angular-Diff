@@ -1,14 +1,30 @@
 var app=angular.module('app', ['ds.objectDiff']);
 app.controller('MyController', ['$scope', 'ObjectDiff', function($scope, ObjectDiff){
        $scope.yourObjectOne = {
-         name:"Honda",
+         name:{
+           firstName:"Rajeev",
+           middleName:"Kumar",
+           lastName:"S"
+         },
          year:2012,
-         model:"CRV"
+         subjectMarks:{
+           Maths:[100,90,80,95],
+           Physics:[100,85,80,90],
+           Chem:[100,89,85,85]
+         }
        };
        $scope.yourObjectTwo = {
-         name:"Honda",
+         name:{
+           firstName:"Suresh",
+           middleName:"Babu",
+           lastName:"K"
+         },
          year:2017,
-         model:"City"
+         subjectMarks:{
+           Maths:[100,90,80,95],
+           Physics:[100,85,80,90],
+           Chem:[10,85,90,100]
+         }
        };
 
        // This is required only if you want to show a JSON formatted view of your object without using a filter
